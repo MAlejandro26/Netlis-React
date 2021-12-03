@@ -15,6 +15,11 @@ import RegistrarCatPerfiles from "./components/CatPerfiles/RegistrarCatPerfiles"
 import RegistrarTipoMuestra from "./components/CatTipoMuestras/RegistrarTipoMuestra";
 import RegistrarCatTipoOrden from "./components/CatTipoOrden/RegistrarCatTipoOrden";
 import RegistrarSexo from "./components/Sexos/RegistrarSexo";
+import TablaPais from "./components/catPais/TablaPais";
+import TablaSexo from "./components/catSexo/TablaSexo";
+import TablaDepartamento from "./components/catDepartamento/TablaDepartamento";
+import TablaPaciente from "./components/catPaciente/TablaPaciente";
+import TablaMedico from "./components/catMedico/TablaMedico";
 
 function App() {
   return (
@@ -81,7 +86,7 @@ function App() {
                 </a>
                 <ul className="nav nav-treeview">
                   <li className="nav-item">
-                    <Link className="nav-link" to="/contacto"><i className="far fa-circle nav-icon" />
+                    <Link className="nav-link" to="/table_paciente"><i className="far fa-circle nav-icon" />
                     <p>Paciente</p></Link>
                   </li>
                 </ul>
@@ -90,16 +95,14 @@ function App() {
                 <a href="#" className="nav-link">
                   <i className="nav-icon fas fa-edit" />
                   <p>
-                    Gestión médicos
+                    Gestión médico
                     <i className="right fas fa-angle-left" />
                   </p>
                 </a>
                 <ul className="nav nav-treeview">
                   <li className="nav-item">
-                    <a href="./index.html" className="nav-link">
-                      <i className="far fa-circle nav-icon" />
-                      <p>Médico</p>
-                    </a>
+                    <Link className="nav-link" to="/table_medico"><i className="far fa-circle nav-icon" />
+                    <p>Médico</p></Link>
                   </li>
                 </ul>
               </li>
@@ -132,8 +135,20 @@ function App() {
                 </ul>
                 <ul className="nav nav-treeview">
                   <li className="nav-item">
-                    <Link className="nav-link" to="/create_sexo"><i className="far fa-circle nav-icon" />
+                    <Link className="nav-link" to="/table_pais"><i className="far fa-circle nav-icon" />
+                    <p>Catálogo de Paises</p></Link>
+                  </li>
+                </ul>
+                <ul className="nav nav-treeview">
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/table_sexo"><i className="far fa-circle nav-icon" />
                     <p>Catálogo de Sexos</p></Link>
+                  </li>
+                </ul>
+                <ul className="nav nav-treeview">
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/table_departamento"><i className="far fa-circle nav-icon" />
+                    <p>Catálogo de Departamentos</p></Link>
                   </li>
                 </ul>
               </li>
@@ -152,6 +167,11 @@ function App() {
         <Route path="/create_tipo_muestra" element={<RegistrarTipoMuestra />} />
         <Route path="/create_tipo_orden" element={<RegistrarCatTipoOrden />} />
         <Route path="/create_sexo" element={<RegistrarSexo />} />
+        <Route path="/table_pais" element={<TablaPais />} />
+        <Route path="/table_sexo" element={<TablaSexo />} />
+        <Route path="/table_departamento" element={<TablaDepartamento />} />
+        <Route path="/table_paciente" element={<TablaPaciente />} />
+        <Route path="/table_medico" element={<TablaMedico/>} />
       </Routes>
     </Router>
   );

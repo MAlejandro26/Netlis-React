@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Login from './components/seguridad/Login';
 import App from './App'; 
-import RegistrarCatPerfiles from './components/CatPerfiles/RegistrarCatPerfiles';
+
 
 ReactDOM.render(
   <React.StrictMode>
