@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function Footer() {
+
+/* export default function */
+const Footer = (props) => {
   return (
     <footer className="main-footer">
       <strong>
-        Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.
+        Copyright © {props.fecha} <a href="https://adminlte.io">AdminLTE.io</a>.
       </strong>
       All rights reserved.
       <div className="float-right d-none d-sm-inline-block">
@@ -13,3 +15,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

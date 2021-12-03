@@ -5,9 +5,8 @@ import style from '../../theme/Tools/Style';
 
 const PerfilUsuario = () => {
     const [usuario, setUsuario] = useState({
-        nombre: '',
         email: '',
-        username: '',
+        userName: '',
         password: ''
     });
 
@@ -32,9 +31,6 @@ const PerfilUsuario = () => {
                 </Typography>
                 <form style={style.form}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={12}>
-                            <TextField name="nombre" value={usuario.nombre} onChange={ingresarValores} variant="outlined" fullWidth label="Ingrese su nombre" />
-                        </Grid>
                         <Grid item xs={12} md={6}>
                             <TextField name="email" value={usuario.email} onChange={ingresarValores} type="email" variant="outlined" fullWidth label="Ingrese su email" />
                         </Grid>

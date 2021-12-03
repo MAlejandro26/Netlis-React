@@ -11,7 +11,7 @@ axios.interceptors.request.use((config) =>{
 }, error =>{
     return Promise.reject(error);
 });
-
+ 
 const requestGenerico = {
     get: (url) =>axios.get(url),
     post: (url,body) => axios.post(url, body),

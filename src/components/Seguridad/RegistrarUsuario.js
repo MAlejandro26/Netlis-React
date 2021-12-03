@@ -5,10 +5,10 @@ import { registrarUsuario } from '../../actions/UsuarioAction';
 
 const RegistrarUsuario = () => {
     const [usuario, setUsuario] = useState({
-        nombre: '',
+/*         id_empleado: '', */
         email: '',
         password: '',
-        username: ''
+        userName: ''
     })
 
     const ingresarValores = e =>{
@@ -22,7 +22,7 @@ const RegistrarUsuario = () => {
 
     const registrarUsuarioBoton = e => {
         e.preventDefault();
-        registrarUsuario(usuario).then(response => {
+         registrarUsuario(usuario).then(response => {
             console.log('Se registró usuario con éxito ', response);
             window.localStorage.setItem("token_seguridad", response.data.token);
         })
@@ -30,21 +30,18 @@ const RegistrarUsuario = () => {
     }
     
     return(
-        <Container component="main" maxWidth="md" justify="center">
+        <Container>
             <div style={style.paper}>
                 <Typography component="h1" variant="h5">
                     Registro de Usuario
                 </Typography>
                 <form style={style.form}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={12}>
-                            <TextField name="nombre" value={usuario.nombre} onChange={ingresarValores} variant="outlined" fullWidth label="Ingrese su nombre" />
-                        </Grid>
                         <Grid item xs={12} md={6}>
                             <TextField name="email" value={usuario.email} onChange={ingresarValores}  type="email" variant="outlined" fullWidth label="Ingrese su email" />
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <TextField name="username" value={usuario.username} onChange={ingresarValores}  variant="outlined" fullWidth label="Ingrese su nombre de usuario" />
+                            <TextField name="userName" value={usuario.userName} onChange={ingresarValores}  variant="outlined" fullWidth label="Ingrese su nombre de usuario" />
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <TextField name="password" value={usuario.password} onChange={ingresarValores}  type="password" variant="outlined" fullWidth label="Ingrese su contraseña" />

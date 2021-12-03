@@ -22,13 +22,13 @@ const Login = () => {
     const loginUsuarioBoton = e => {
         e.preventDefault();
         loginUsuario(usuario).then(response =>{
-            console.log('Login exitosio ', response);
+            console.log('Login exitoso ', response);
             window.localStorage.setItem('token_seguridad', response.data.token);
         });
     }
     return ( 
         <Container>
-            <div style={style.paper}>
+            <div style={style.paper} clasaName="container">
                 <Avatar style={style.avatar}>
                     <LockClockOutlinedIcon style={style.icon}/>
                 </Avatar>
